@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  text-align: center;
+  height: 250px;
+}
+
+nav {
+  /* padding: 2px; */
+  border: 1px solid gray;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0 auto;
+  max-width: 500px;
+  font-size: 20px;
+  line-height: 80px;
+}
+
+li ,a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+li a {
+  display: block;
+}
+
+ul li {
+  border-top: 2px solid gray;
+}
+ul li a , ul li a:visited 
+{
+  color: gray;
+}
+
+ul li a:hover, ul li a:focus {
+  color: white;
+  background-color: gray;
+  /* display: block; */
+}
+
+ul li:last-child a {
+  border-radius: 0 0 10px 10px;
+}
+
+h2 {
+  background-color: gold;
+  border-radius: 10px 10px 0 0;
+}
