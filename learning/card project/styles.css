@@ -1,0 +1,96 @@
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background-color: gray;
+    background-image : radial-gradient(circle at center, #ecede3, #a68e5e);
+    flex-direction: column;
+}
+
+header ,main , footer {
+    display: grid;
+    place-content: center;
+}
+
+header {
+    padding: 10px;
+    background-color: #7d5939;
+    position: sticky;
+    top: 0;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+nav {
+    background-color: rgba(245, 245, 245, 0.694);
+    background-color:  #eae3c1;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a:visited {
+    color: black;
+}
+
+nav a {
+    color: black;
+    margin: 20px;
+    font-weight: bold;
+}
+
+main {
+    flex-grow: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+main div {
+    display: flex;
+    background-color: #7d593998;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #c46e14;
+    border-radius: 20%;
+    min-height: 500px;
+}
+
+.hobbies {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.name-tag {
+    font-size: 30px;
+    font-weight: bold;
+    order: -1;
+}
+
+main img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+footer {
+    background-color: red;
+    position: sticky;
+    background-color: #7d5939;
+    color: white;
+    padding: 10px;
+    font-size: bold;
+    bottom: 0;
+}
+
+
