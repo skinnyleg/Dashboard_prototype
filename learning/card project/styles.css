@@ -107,7 +107,6 @@ footer {
 }
 
 
-
 /* || SMALL */
 @media screen and (min-width: 576px) {
     /* main {
@@ -121,33 +120,40 @@ footer {
 /* || MEDIUM */
 @media screen and (min-width: 768px) {
     main {
+        /* margin: 0; */
         flex-flow: row wrap;
-        justify-items: space-evenly;
-        align-items: center;
-        min-width:350px;
-        min-height: 400px;
+        row-gap: 20px;
+        /* justify-items: center; */
+        /* align-items: center; */
+        justify-content: center;
+        /* min-width:350px; */
+        /* min-height: 400px; */
+    }
+
+    .name-tag {
+        order: 0;
     }
   }
   
   /* || LARGE */
   /* @media screen and (min-width: 992px) {
     main {
-        width: 100%;
-        flex-flow: row nowrap;
-        justify-items: center;
-        align-items: center;
+        flex-direction: row;
+        justify-items: center; */
+        /* align-items: center;
+        justify-content: center;
     }
   } */
   
   /* || XL  */
-  /* @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     main {
-        width: 100%;
-        flex-flow: row nowrap;
+        flex-direction: row;
         justify-items: center;
-        align-items: center;
+        /* align-items: center;
+        justify-content: center; */
     }
-  } */
+  }
   
   /* || MOBILE DEVICE LANDSCAPE  */
   /* @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
