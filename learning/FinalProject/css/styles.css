@@ -148,9 +148,10 @@ button:hover {
     font-size: 14px;
 }
 
-nav ul li {
+nav ul {
     /* display: flex;
     justify-content: center; */
+    list-style: none;
 }
 
 .highlight {
