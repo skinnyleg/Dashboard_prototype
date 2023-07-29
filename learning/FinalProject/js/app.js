@@ -1,50 +1,54 @@
-// Get the .profile button element
-
 
 const buttonAll = document.querySelector('nav ul');
 
-// const profileButton = document.querySelector('.profile');
-// const navButton = document.querySelector('.nav');
 
-// Get the .container element
-// const container = document.querySelector('.container');
+
+
+
+
+function closeAllContainers(cont) {
+  const li = buttonAll.querySelectorAll('li');
+  // console.log(li);
+  li.forEach(elem => {
+    const container = elem.querySelector('.container');
+    const profile = elem.querySelector('.profile');
+    if (profile == null)
+    {
+      if (container != null && container != cont)
+        container.style.display =  'none';
+    }
+  })
+  // for (int i = 0; buttonAll.)
+}
+
+
+
+
+
 
 buttonAll.addEventListener('click', (event) => {
 
   const li = event.target.closest('li');
   const container = li.querySelector('.container');
   const button = li.querySelector('.btn');
-  container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
-  console.log(button);
-  console.log('is profile here == ', button.classlist.contains('profile'));
-  if (button.classlist.contains('profile')){
-    button.style.borderBottom = button.style.borderBottom === 'none' ? '2px solid gray' : 'none';
+  const profile = li.querySelector('.profile');
+  if (container != null)
+  {
+    if (profile == null)
+      closeAllContainers(container);
+    container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
   }
-
-  console.log(li);
+  
+  if (profile != null)
+  {
+    button.style.borderBottom = button.style.borderBottom === 'none' ? '1px solid gray' : 'none';
+    if (button.style.borderBottom === '1px solid gray')
+    {
+      container.style.borderBottom =  'none';
+    }
+    else
+    {
+      container.style.borderBottom = '1px solid gray';
+    }
+  }
 })
-
-// Add an event listener to the profile button
-// profileButton.addEventListener('click', () => {
-//   // Toggle the display of the container when the button is clicked
-//   console.log('hello1');
-//   container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
-//   // container.style.borderBottom = '2px solid gray';
-//   // console.log(profileButton.style.borderBottom);
-//   // profileButton.style.borderBottom = 'none';
-//   profileButton.style.borderBottom = profileButton.style.borderBottom === 'none' ? '2px solid gray' : 'none';
-//   // container.classList.toggle('show');
-// });
-
-// console.log(navButton);
-
-// navButton.addEventListener('click', () => {
-//   console.log('hello2');
-//   // Toggle the display of the container when the button is clicked
-//   container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
-//   // container.style.borderBottom = '2px solid gray';
-//   // console.log(profileButton.style.borderBottom);
-//   // profileButton.style.borderBottom = 'none';
-//   // profileButton.style.borderBottom = profileButton.style.borderBottom === 'none' ? '2px solid gray' : 'none';
-//   // container.classList.toggle('show');
-// });
